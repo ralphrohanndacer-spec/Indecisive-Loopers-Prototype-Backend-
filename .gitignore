@@ -1,2 +1,14 @@
-.idea/
+# Environment variables
 .env
+.env.*
+
+# PyCharm
+.idea/
+
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
