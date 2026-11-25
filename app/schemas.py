@@ -10,6 +10,7 @@ class StallSimpleResponse(BaseModel):
     location: str
     stall_type: StallType
     is_open: bool
+    operating_hours: Optional[str] = None
     image_url: Optional[str] = None
 
     model_config = ConfigDict(from_attributes=True)
@@ -51,6 +52,7 @@ class StallBase(BaseModel):
     location: str
     is_open: bool
     stall_type: StallType
+    operating_hours: Optional[str] = None
     image_url: Optional[str] = None
 
 
@@ -63,6 +65,7 @@ class StallUpdate(BaseModel):
     location: Optional[str] = None
     is_open: Optional[bool] = None
     stall_type: Optional[StallType] = None
+    operating_hours: Optional[str] = None
     image_url: Optional[str] = None
 
 

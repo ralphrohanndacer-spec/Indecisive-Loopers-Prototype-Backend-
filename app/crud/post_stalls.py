@@ -9,6 +9,7 @@ async def post_stall(request, db):
         location=request.location,
         stall_type=request.stall_type,
         is_open=request.is_open,
+        operating_hours=request.operating_hours,
         image_url=request.image_url
     )
     db.add(new_stall)

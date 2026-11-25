@@ -18,6 +18,7 @@ class Stall(Base):
     location: Mapped[str] = mapped_column(String, index = True)
     is_open: Mapped[bool] = mapped_column(Boolean, index=True)
     stall_type: Mapped[StallType] = mapped_column(Enum(StallType), default=StallType.STALL, index=True)
+    operating_hours: Mapped[str] = mapped_column(String, nullable=True)
     image_url: Mapped[str] = mapped_column(String, nullable=True)
 
     menu_items: Mapped[list["MenuItem"]] = relationship(back_populates="stall", cascade="all, delete-orphan")
